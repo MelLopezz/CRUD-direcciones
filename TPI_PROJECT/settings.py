@@ -55,7 +55,7 @@ ROOT_URLCONF = 'TPI_PROJECT.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR,'templates/negocio'),os.path.join(BASE_DIR,'templates/cliente'),os.path.join(BASE_DIR,'templates/repartidor')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
