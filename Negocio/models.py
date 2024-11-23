@@ -38,7 +38,7 @@ class Producto(models.Model):
     precio_producto = models.DecimalField(max_digits=8,decimal_places=2)
     disponibilidad_producto = models.BooleanField(default=False)
     descripcion_producto = models.CharField(max_length=50)
-    imagen = models.ImageField(upload_to='productos',null=True)
+    imagen_producto = models.ImageField(upload_to='productos',null=True)
 
     class Meta:
         db_table = 'Productos'
