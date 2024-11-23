@@ -69,41 +69,7 @@ class Pago (models.Model):
                 texto = "{0} {1}"
                 return texto.format(self.correo_cliente,self.id_pago)
 
-class Descuento (models.Model):
-        id_descuento=models.AutoField(primary_key=True)
-        correo=models.ForeignKey('Negocio.Usuario',on_delete=models.RESTRICT)
-        correo_cliente=models.ForeignKey(Cliente,on_delete=models.RESTRICT)
-        tipo_descuento=models.CharField(max_length=15)
-        monto_desceunto=models.DecimalField(max_digits=8,decimal_places=2)
-        estado_descuento=models.BooleanField(default=False)
-        fecha_vencimiento=models.DateField()
-
-        class Meta:
-                db_table='Descuento'
-                verbose_name = 'Descuento'
-                verbose_name_plural = 'Descuentos'
-                ordering=['id_descuento']
-
-        def __str__(self):
-                texto = "{0} {1}"
-                return texto.format(self.correo,self.correo_cliente,self.id_descuento)
 
 
-class Pedido:
-        id_pedido=models.AutoField(primary_key=True)
-        correo=models.ForeignKey('Negocio.Usuario',on_delete=models.RESTRICT)
-        correo_cliente=models.ForeignKey(Cliente,on_delete=models.RESTRICT)
-        id_pago=models.ForeignKey(Pago,on_delete=models.RESTRICT)
-        monto_pedido=models.DecimalField(max_digits=8,decimal_places=2)
-        estado_pedido=models.CharField(max_length=15)
-        costo_pedido=models.DecimalField(max_digits=8,decimal_places=2)
 
-        class Meta:
-                db_table='Pedido'
-                verbose_name = 'Pedido'
-                verbose_name_plural = 'Pedidos'
-                ordering=['id_pedido']
 
-        def __str__(self):
-                texto = "{0} {1} {2} {3}"
-                return texto.format(self.id_pedido,self.correo,self.correo_cliente,self.id_pago)
