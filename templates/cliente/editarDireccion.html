@@ -1,0 +1,55 @@
+{% extends "./base.html" %}
+
+{%block title%} Direcciones{%endblock%}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+{% block body%}
+<div class="row">
+    <div class=" col-md-4 offset-md-4">
+        <h2>Edicion de direcciones</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="/modificarDireccion/" method="POST"> {% csrf_token %}
+                    <div class ="form-group">
+                        <input type="text" id ="txtNombreCliente" name="txtNombreCliente" value="{{direccion.cliente_id}}" class="form-control" placeholder="Correo electronico"  maxlength="50" required>
+
+                    </div>
+
+                    <div class ="form-group">
+                        <input type="text" id ="txtNombreDireccion" name="txtNombreDireccion" value="{{direccion.nombre_direccion}}"  class="form-control" placeholder="Nombre de la direccion"  maxlength="50" required>
+
+                    </div>
+                    <div class ="form-group">
+                        <input type="text" id ="txtDepartamento" name="txtDepartamento" value="{{direccion.departamento}}"  class="form-control" placeholder="Departamento" maxlength="50" required>
+
+                    </div>
+                    <div class ="form-group">
+                        <input type="text" id ="txtMunicipio" name="txtMunicipio" value="{{direccion.municipio}}"  class="form-control" placeholder="Municipio"  maxlength="50" required>
+
+                    </div>
+                    <div class ="form-group">
+                        <input type="text" id ="txtCalle" name="txtCalle" value="{{direccion.calle}}" class="form-control" placeholder="Calle"  maxlength="50" required>
+
+                    </div>
+                    <div class ="form-group">
+                        <input type="text" id ="txtNumeroDeCasa" name="txtNumeroDeCasa" value="{{direccion.numero_casa}}" class="form-control" placeholder="numero de casa"  min="1" max="50" required>
+
+                    </div>
+
+                    <div class ="form-group">
+                        <input type="text" id ="puntoDeReferencia" name="puntoDeReferencia" value="{{direccion.punto_referencia}}"  class="form-control" placeholder="Punto de referencia" minlength="6" maxlength="6" required>
+
+                    </div>
+
+                    <div class ="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white" >Guardar</button>
+
+                    </div>
+
+                </form>
+            
+            </div>
+        </div>
+
+    </div>
+</div>
+{%endblock%}

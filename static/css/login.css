@@ -1,0 +1,134 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #9b9b9b;
+}
+.Container{
+    margin: auto;
+    max-width: 400px;
+    transform: translate(5%,50%);
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.Container h2{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+
+.Container form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .element {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 10px 0;
+
+}
+
+form .elemento {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 10px 0;
+
+}
+
+.element input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+
+}
+.elemento input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+
+}
+.element label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    
+}
+
+.element input:focus ~ label,
+.element input:focus ~ label{
+    position: absolute;
+    top: -10px;
+    left: 0;
+    transform: translateY(-12px) scale(.7);
+    font-size: 20px;
+    color: black;
+
+}
+.elemento input:focus ~ label,
+.elemento input:focus ~ label{
+    position: absolute;
+    top: -10px;
+    left: -1px;
+    transform: translateY(-12px) scale(.7);
+    font-size: 20px;
+    color: black;
+    
+
+}
+.elemento label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+  
+    
+}
+
+.element input:focus {
+    border-bottom: 2px solid #6c3483;
+
+
+}
+.elemento input:focus {
+    border-bottom: 2px solid #6c3483;
+
+
+}
+.recordar{
+    margin:-5px 0 20px 5px;
+    color: blue;
+    cursor: pointer;
+}
+
+.recordar:hover{
+    text-decoration: underline;
+}
+
+.nav-item a{
+    margin:-5px 0 20px 5px;
+    color: blue;
+    background-color: lightgrey;
+    padding: 0 80px;
+    margin: auto;
+}
